@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyBus</string>
+    <string name="todo">TODO</string>
+    <string name="Test">Test123456</string>
+    <string name="heading1">Tag The Bus!!</string>
+
+    <string name="google_maps_API_Key">AIzaSyCAJs35S3ugPsi_zQ-B47sz4Q6yXaHqh3k</string>
+</resources>
