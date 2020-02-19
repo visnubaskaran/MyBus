@@ -60,15 +60,16 @@ public class PhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
 
+        if(my_image_list!=null){
         my_image_list.clear();
+        }
 
         name = findViewById(R.id.stopname);
         no_data = (TextView) findViewById(R.id.no_data);
         textheader = findViewById(R.id.textheader);
         imageButton = findViewById(R.id.imageButton);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView_bus_stop);
-
-       recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
 
@@ -96,6 +97,7 @@ public void read_data_from_file()
                my_image_list.add(model);
 
            }
+            no_data.setVisibility(View.GONE);
             adapter = new stop_image_adapter(my_image_list,getApplicationContext());
             recyclerView.setAdapter(adapter);
         }

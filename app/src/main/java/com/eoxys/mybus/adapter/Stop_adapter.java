@@ -49,6 +49,7 @@ public class Stop_adapter extends RecyclerView.Adapter<Stop_adapter.ViewHolder> 
 
                 Intent intent = new Intent(context, PhotoActivity.class);
                 intent.putExtra("stop_name", list_item.getStopname());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });

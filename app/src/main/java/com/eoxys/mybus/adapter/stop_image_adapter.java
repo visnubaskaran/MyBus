@@ -50,6 +50,7 @@ public class stop_image_adapter extends RecyclerView.Adapter<stop_image_adapter.
             public void onClick(View v) {
                 Intent intent = new Intent(context, PhotoDisplayActivity.class);
                 intent.putExtra("Img_path", list_item.getImage_location());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
